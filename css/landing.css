@@ -1,0 +1,140 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url("../assets/images/background3.jpg") center/cover no-repeat;
+    font-family: 'Anton', 'Bebas Neue', sans-serif;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+/* NAVBAR */
+.navbar {
+    position: relative;
+    z-index: 2;
+    top: 3%;
+    border-radius: 999px;
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 20px 8px;
+    margin: 0 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.navbar ul li {
+    cursor: pointer;
+}
+
+.navbar ul li:hover {
+    color: #f56200;
+    transform: translateY(-1px) scale(1.03);
+}
+
+/* EMAIL*/
+
+.top-email {
+    position: fixed;
+    top: 15px;
+    right: 28px;
+    z-index: 5;
+
+    padding: 11px 20px;
+    border-radius: 999px;
+
+    font-family: 'Anton', 'Bebas Neue', sans-serif;
+    font-size: 0.85rem;
+    color: white;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+
+    background: rgba(20, 15, 10, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(12px);
+
+    opacity: 0.85;
+    /* transition: all 0.3s ease; */
+}
+
+.top-email:hover {
+    color: #f56200;
+    transform: scale(1.03);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    #name {
+        font-size: 14vh;
+    }
+
+    .top-email {
+        top: 16px;
+        right: 16px;
+        font-size: 0.8rem;
+    }
+}
+
+
+/* HERO TEXT */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    top: 40%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.title {
+    font-family: 'Archivo Black';
+    font-size: 10rem;
+    color: #ffffff;
+    letter-spacing: 6px;
+    font-weight: lighter;
+}
+
+.subtitle {
+    margin-top: 12px;
+    font-family: 'Audiowide';
+    font-size: 1.5rem;
+    letter-spacing: 1.8px;
+    color: #dc2f02;
+    line-height: 1.5;
+}
+
+
+/* LOCATION */
+.location {
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    z-index: 2;
+}
+
+.location.right {
+    right: 40px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: #00ff88;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00ff88;
+}

@@ -1,0 +1,79 @@
+.about-section {
+    height: 100vh;
+    padding: 80px 80px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-glass {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    gap: 10px;
+    padding: 20px 10px;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border-radius: 24px;
+    border: 1px solid rgba(255, 200, 0, 0.18);
+}
+
+.about-image {
+    flex: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 75%;
+    max-width: 300px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.about-content {
+    flex: 2.5;
+    color: #fff;
+    font-family: 'Anton', 'Bebas Neue', sans-serif;
+}
+
+.about-name {
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+    color: #e10600;
+    margin-bottom: 10px;
+}
+
+.about-description {
+    font-size: 1rem;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1.2px;
+    line-height: 1.8;
+    color: #ffffffcc;
+    margin-bottom: 24px;
+}
+
+.about-role {
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    color: #ffffffaa;
+}
+
+.about-role span {
+    color: #f5c400;
+}
+
+@media (max-width: 900px) {
+    .about-glass {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        max-width: 220px;
+    }
+}
