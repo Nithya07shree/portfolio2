@@ -3,6 +3,7 @@
     background: #000;
     color: #fff;
     font-family: 'Space Mono', monospace;
+    overflow-x: hidden;
 }
 
 .bat-title {
@@ -19,7 +20,6 @@
     padding: 0;
     position: relative;
     border-left: 2px solid rgba(255, 255, 255, 0.1);
-    /* The vertical connector */
     margin-left: 20px;
 }
 
@@ -30,7 +30,6 @@
     transition: 0.3s;
 }
 
-/* The Node/Dot on the line */
 .node {
     position: absolute;
     left: -7px;
@@ -68,4 +67,62 @@
     max-width: 600px;
     font-size: 0.95rem;
     line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+    .bat-console {
+        padding: 40px 5%;
+    }
+
+    .achievement-title {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .bat-title {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .achievement-list {
+        margin-left: 10px;
+    }
+
+    .achievement-item {
+        padding-left: 25px;
+        margin-bottom: 40px;
+    }
+
+    .achievement-title {
+        font-size: 1.8rem !important;
+        line-height: 1.1;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .desc {
+        font-size: 0.85rem;
+        max-width: 100%;
+    }
+
+    .meta {
+        font-size: 0.7rem;
+    }
+
+    .node {
+        left: -7px;
+    }
+}
+
+@media (max-width: 480px) {
+    .achievement-title {
+        font-size: 1.5rem !important;
+    }
+
+    .bat-console {
+        padding: 30px 15px;
+    }
 }

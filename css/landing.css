@@ -133,64 +133,61 @@
 @media (max-width: 768px) {
     .hero {
         height: 100svh;
-        /* safer than 100vh on mobile */
     }
 
-    /* NAVBAR */
     .navbar {
-        padding: 6px 16px;
-        margin: 0 10px;
+        width: 95%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 8px 12px;
+        margin: 0;
+        top: 2%;
     }
 
     .navbar ul {
-        gap: 18px;
-        font-size: 12px;
+        gap: 12px;
+        font-size: 10px;
+        justify-content: center;
     }
 
-    /* HERO TEXT */
     .hero-content {
         top: 45%;
-        padding: 0 12px;
+        width: 100%;
+        padding: 0 20px;
     }
 
     .title {
-        font-size: 4.5rem;
-        letter-spacing: 3px;
+        font-size: 3rem;
+        letter-spacing: 2px;
+        line-height: 1.1;
     }
 
     .subtitle {
-        font-size: 1.1rem;
-        letter-spacing: 1.2px;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
     }
 
-    /* EMAIL BUTTON */
     .top-email {
+        position: relative;
+        margin: 20px 0 0 20px;
         padding: 8px 14px;
         font-size: 0.75rem;
+        display: inline-block;
     }
 
-    /* LOCATION */
     .location {
         font-size: 10px;
         bottom: 20px;
     }
-
-    .location.right {
-        right: 20px;
-    }
 }
 
-/* Small phones */
 @media (max-width: 480px) {
     .title {
-        font-size: 3.6rem;
-    }
-
-    .subtitle {
-        font-size: 1rem;
+        font-size: 2.4rem;
     }
 
     .navbar ul {
-        gap: 14px;
+        gap: 8px;
+        letter-spacing: 1px;
     }
 }

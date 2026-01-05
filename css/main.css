@@ -4,10 +4,29 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#experience-section,
+#about-section,
+#projects,
+#skills,
+#contact-section {
+    scroll-margin-top: 100px;
+}
+
 body {
     background: #000;
     color: #fff;
-    overflow: hidden;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .hidden {
@@ -18,16 +37,4 @@ body {
     body {
         overflow-x: hidden;
     }
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-#experience-section,
-#about-section,
-#projects,
-#skills,
-#contact-section {
-    scroll-margin-top: 100px;
 }

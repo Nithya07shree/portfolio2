@@ -73,18 +73,29 @@
 
 @media (max-width: 768px) {
     .skills-section {
-        padding: 60px 20px;
+        padding: 40px 15px;
+        width: 100%;
+    }
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .skill-card {
-        padding: 22px 20px;
+        padding: 20px;
+        width: 100%;
     }
 
-    .skill-card h3 {
-        font-size: 1.2rem;
+    .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
     }
 
     .skill-tags span {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
+        padding: 4px 10px;
     }
 }
