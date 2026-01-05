@@ -56,7 +56,7 @@
     margin-bottom: 5px;
 }
 
-.achievement-title {
+.bat-console .achievement-item .achievement-title {
     font-size: 1.5rem;
     margin: 0;
     letter-spacing: 1px;
@@ -86,8 +86,8 @@
         margin-bottom: 40px;
     }
 
-    .achievement-title {
-        font-size: 0.85rem !important;
+    .bat-console .achievement-item .achievement-title {
+        font-size: 1.1rem !important;
         line-height: 1.1;
         word-wrap: break-word;
         overflow-wrap: break-word;
@@ -108,8 +108,9 @@
 }
 
 @media (max-width: 480px) {
-    .achievement-title {
-        font-size: 1.5rem !important;
+    .bat-console .achievement-item .achievement-title {
+        font-size: 0.95rem !important;
+        word-wrap: break-word;
     }
 
     .bat-console {
