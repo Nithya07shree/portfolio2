@@ -1,0 +1,70 @@
+.contact-section {
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.terminal-text {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #da0000;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #333;
+    color: #fff;
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group label {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    color: #555;
+    pointer-events: none;
+    transition: 0.3s;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* Animation for Label Moving Up */
+.input-group input:focus~label,
+.input-group input:not(:placeholder-shown)~label,
+.input-group textarea:focus~label,
+.input-group textarea:not(:placeholder-shown)~label {
+    top: -20px;
+    font-size: 0.8rem;
+}
+
+/* Submit Button Style */
+.send-btn {
+    background: transparent;
+    border: 1px solid #E21F26;
+    color: #ffffff;
+    padding: 15px 40px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.send-btn:hover {
+    box-shadow: 0 0 20px rgba(226, 31, 38, 0.4);
+}
