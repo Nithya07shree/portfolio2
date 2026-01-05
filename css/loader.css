@@ -56,3 +56,18 @@
     opacity: 0;
     visibility: hidden;
 }
+
+@media (max-width: 768px) {
+    .loader-content {
+        max-width: 90%;
+    }
+
+    .loader-progress-container {
+        height: 3px;
+    }
+
+    .loader-status {
+        font-size: 0.7rem;
+        letter-spacing: 1.5px;
+    }
+}

@@ -73,20 +73,6 @@
     transform: scale(1.03);
 }
 
-/* RESPONSIVE */
-
-@media (max-width: 768px) {
-    #name {
-        font-size: 14vh;
-    }
-
-    .top-email {
-        top: 16px;
-        right: 16px;
-        font-size: 0.8rem;
-    }
-}
-
 
 /* HERO TEXT */
 .hero-content {
@@ -137,4 +123,69 @@
     background: #00ff88;
     border-radius: 50%;
     box-shadow: 0 0 10px #00ff88;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 100svh;
+        /* safer than 100vh on mobile */
+    }
+
+    /* NAVBAR */
+    .navbar {
+        padding: 6px 16px;
+        margin: 0 10px;
+    }
+
+    .navbar ul {
+        gap: 18px;
+        font-size: 12px;
+    }
+
+    /* HERO TEXT */
+    .hero-content {
+        top: 45%;
+        padding: 0 12px;
+    }
+
+    .title {
+        font-size: 4.5rem;
+        letter-spacing: 3px;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+        letter-spacing: 1.2px;
+    }
+
+    /* EMAIL BUTTON */
+    .top-email {
+        padding: 8px 14px;
+        font-size: 0.75rem;
+    }
+
+    /* LOCATION */
+    .location {
+        font-size: 10px;
+        bottom: 20px;
+    }
+
+    .location.right {
+        right: 20px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .title {
+        font-size: 3.6rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .navbar ul {
+        gap: 14px;
+    }
 }

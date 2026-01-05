@@ -13,10 +13,6 @@
     display: flex;
     gap: 10px;
     padding: 20px 10px;
-    background: rgba(0, 0, 0, 0.45);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-
     border-radius: 24px;
     border: 1px solid rgba(255, 200, 0, 0.18);
 }
@@ -67,13 +63,45 @@
     color: #f5c400;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+    .about-section {
+        height: auto;
+        padding: 60px 20px;
+    }
+
     .about-glass {
-        flex-direction: column;
-        text-align: center;
+        padding: 24px 16px;
+        gap: 20px;
+        border-radius: 20px;
     }
 
     .about-image img {
-        max-width: 220px;
+        width: 70%;
+        max-width: 200px;
+    }
+
+    .about-name {
+        font-size: 2rem;
+        letter-spacing: 3px;
+    }
+
+    .about-description {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .about-role {
+        font-size: 0.9rem;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .about-name {
+        font-size: 1.8rem;
+    }
+
+    .about-description {
+        font-size: 0.9rem;
     }
 }

@@ -1,6 +1,7 @@
-const title = document.querySelector(".title");
+export function landingPage() {
+    const title = document.querySelector(".title");
+    if (!title) return;
 
-window.addEventListener("load", () => {
     title.style.opacity = 0;
     title.style.transform = "translateX(-20px)";
 
@@ -9,4 +10,4 @@ window.addEventListener("load", () => {
         title.style.opacity = 1;
         title.style.transform = "translateX(0)";
     }, 300);
-});
+}
