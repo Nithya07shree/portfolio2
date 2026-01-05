@@ -19,3 +19,15 @@ body {
         overflow-x: hidden;
     }
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+#experience-section,
+#about-section,
+#projects,
+#skills,
+#contact-section {
+    scroll-margin-top: 100px;
+}

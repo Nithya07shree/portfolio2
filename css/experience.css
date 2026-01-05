@@ -1,5 +1,5 @@
 /* EXPERIENCE SECTION */
-.experience-section {
+#experience-section {
     padding: 10px 80px;
     background: #000;
     color: #fff;
@@ -111,7 +111,7 @@
 }
 
 @media (max-width: 900px) {
-    .experience-section {
+    #experience-section {
         padding: 40px 20px;
     }
 
