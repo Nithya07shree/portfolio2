@@ -1,19 +1,30 @@
 export function contact() {
-    document.querySelector('.contact-form').addEventListener('submit', (e) => {
+    const form = document.querySelector('.contact-form');
+    const btn = document.querySelector('.send-btn span');
+
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        const btn = document.querySelector('.send-btn span');
+        const data = new FormData(e.target);
+        try {
+            const response = await fetch(e.target.action, {
+                method: 'POST',
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
 
-        // Simulate sending
-        btn.innerText = "TRANSMITTING...";
-
+            if (response.ok) {
+                btn.innerText = "SUCCESS // RECEIVED";
+                form.reset();
+            } else {
+                btn.innerText = "ERROR // INTERCEPTED";
+            }
+        } catch (error) {
+            btn.innerText = "SYSTEM_FAILURE";
+        }
         setTimeout(() => {
-            btn.innerText = "SUCCESS // RECEIVED";
-            document.querySelector('.contact-form').reset();
-
-            // Return to normal after 3 seconds
-            setTimeout(() => {
-                btn.innerText = "SEND_MESSAGE";
-            }, 3000);
-        }, 1500);
+            btn.innerText = "SEND_MESSAGE";
+        }, 3000);
     });
 }
