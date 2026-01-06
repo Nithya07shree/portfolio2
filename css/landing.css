@@ -130,64 +130,109 @@
     box-shadow: 0 0 10px #00ff88;
 }
 
-@media (max-width: 768px) {
-    .hero {
-        height: 100svh;
-    }
 
+/* navbar */
+@media (max-width: 768px) {
     .navbar {
-        width: 95%;
+        width: 90%;
+        /* Leave a small margin on the sides */
         left: 50%;
         transform: translateX(-50%);
-        padding: 8px 12px;
-        margin: 0;
-        top: 2%;
+        top: 15px;
+        /* Fixed distance from top */
+        padding: 10px 15px;
+        background: rgba(0, 0, 0, 0.6);
+        /* Slightly darker for better contrast */
+        backdrop-filter: blur(15px);
     }
 
     .navbar ul {
-        gap: 12px;
-        font-size: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        /* Allow links to wrap to a 2nd line if screen is tiny */
         justify-content: center;
+        gap: 12px 20px;
+        /* Vertical gap 12px, Horizontal 20px */
     }
 
-    .hero-content {
-        top: 45%;
-        width: 100%;
-        padding: 0 20px;
-    }
-
-    .title {
-        font-size: 3.5rem;
-        letter-spacing: 2px;
-        line-height: 1.1;
-    }
-
-    .subtitle {
-        font-size: 0.9rem;
+    .navbar ul li a {
+        font-size: 14px;
+        /* Minimum readable size for mobile */
+        padding: 6px 4px;
+        /* Larger hit area for fingers */
         letter-spacing: 1px;
-    }
-
-    .top-email {
-        position: relative;
-        margin: 20px 0 0 20px;
-        padding: 8px 14px;
-        font-size: 0.75rem;
-        display: inline-block;
-    }
-
-    .location {
-        font-size: 10px;
-        bottom: 20px;
     }
 }
 
 @media (max-width: 480px) {
-    .title {
-        font-size: 2.8rem;
+    .navbar {
+        width: 92%;
+        padding: 12px 8px;
     }
 
     .navbar ul {
-        gap: 8px;
-        letter-spacing: 1px;
+        gap: 10px 15px;
+    }
+
+    .navbar ul li a {
+        font-size: 13px;
+        /* Slightly smaller but still readable */
+    }
+}
+
+/* hero and title */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        /* Allow content to dictate height if needed */
+        min-height: 100svh;
+        /* Perfect fit for mobile screens */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* Centers Pavan J vertically */
+    }
+
+    .hero-content {
+        top: 0;
+        /* Reset your 45% top since we are using flex centering now */
+        transform: none;
+        padding-top: 80px;
+        /* Space for the floating navbar */
+    }
+
+    .title {
+        font-size: 4rem;
+        /* Balanced size for Moto G45 */
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        padding: 0 10%;
+        /* Keep text from hitting the screen edges */
+    }
+}
+
+/* email and location */
+@media (max-width: 768px) {
+    .top-email {
+        position: static;
+        /* Remove from bottom-left flow */
+        display: block;
+        width: fit-content;
+        margin: 30px auto 0;
+        /* Center it under the subtitle */
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+
+    .location.right {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin-top: 40px;
+        justify-content: center;
+        width: 100%;
     }
 }
