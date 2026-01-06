@@ -133,106 +133,92 @@
 
 /* navbar */
 @media (max-width: 768px) {
-    .navbar {
-        width: 90%;
-        /* Leave a small margin on the sides */
-        left: 50%;
-        transform: translateX(-50%);
-        top: 15px;
-        /* Fixed distance from top */
-        padding: 10px 15px;
-        background: rgba(0, 0, 0, 0.6);
-        /* Slightly darker for better contrast */
-        backdrop-filter: blur(15px);
-    }
-
-    .navbar ul {
+    .hero {
+        height: auto;
+        min-height: 100svh;
         display: flex;
-        flex-wrap: wrap;
-        /* Allow links to wrap to a 2nd line if screen is tiny */
-        justify-content: center;
-        gap: 12px 20px;
-        /* Vertical gap 12px, Horizontal 20px */
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 80px;
+        padding-bottom: 40px;
     }
 
-    .navbar ul li a {
-        font-size: 14px;
-        /* Minimum readable size for mobile */
-        padding: 6px 4px;
-        /* Larger hit area for fingers */
-        letter-spacing: 1px;
-    }
-}
-
-@media (max-width: 480px) {
     .navbar {
-        width: 92%;
-        padding: 12px 8px;
+        position: fixed;
+        left: 2%;
+        transform: none;
+        width: 96%;
+        /* padding: 12px 10px; */
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(8px);
     }
 
     .navbar ul {
-        gap: 10px 15px;
+        gap: 12px;
+        justify-content: flex-start;
+        flex-wrap: wrap;
     }
 
     .navbar ul li a {
         font-size: 13px;
-        /* Slightly smaller but still readable */
-    }
-}
-
-/* hero and title */
-@media (max-width: 768px) {
-    .hero {
-        height: auto;
-        /* Allow content to dictate height if needed */
-        min-height: 100svh;
-        /* Perfect fit for mobile screens */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        /* Centers Pavan J vertically */
+        /* Larger for readability */
+        padding: 2px 4px;
     }
 
+    /* 3. Hero Text Layout */
     .hero-content {
+        position: relative;
         top: 0;
-        /* Reset your 45% top since we are using flex centering now */
         transform: none;
-        padding-top: 80px;
-        /* Space for the floating navbar */
+        text-align: left;
+        padding: 40px 5%;
+        order: 1;
     }
 
     .title {
-        font-size: 4rem;
-        /* Balanced size for Moto G45 */
+        font-size: 4.2rem;
         margin-bottom: 10px;
     }
 
     .subtitle {
-        font-size: 1rem;
-        padding: 0 10%;
-        /* Keep text from hitting the screen edges */
+        font-size: 0.8rem;
+        margin-bottom: 20px;
     }
-}
 
-/* email and location */
-@media (max-width: 768px) {
     .top-email {
-        position: static;
-        /* Remove from bottom-left flow */
-        display: block;
+        position: relative;
+        display: inline-block;
+        order: 2;
+        margin: 0 0 20px 3%;
+        /* Aligned with title */
+        top: auto;
+        left: 0;
+        padding: 4px 14px;
+        font-size: 0.8rem;
         width: fit-content;
-        margin: 30px auto 0;
-        /* Center it under the subtitle */
-        font-size: 0.9rem;
-        padding: 10px 20px;
     }
 
     .location.right {
         position: relative;
+        order: 3;
+        left: 5%;
         right: auto;
         bottom: auto;
-        margin-top: 40px;
-        justify-content: center;
-        width: 100%;
+        margin-top: 20px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 3.5rem;
+    }
+
+    .navbar ul {
+        gap: 6px;
+    }
+
+    .navbar ul li a {
+        font-size: 8px;
     }
 }
