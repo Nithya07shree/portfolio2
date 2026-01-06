@@ -134,8 +134,8 @@
 /* navbar */
 @media (max-width: 768px) {
     .hero {
-        height: auto;
-        min-height: 100svh;
+        height: fit-content;
+        /* min-height: 50svh; */
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
