@@ -1,112 +1,83 @@
-#about-section {
-    /* height: 80vh; */
-    padding: 60px 60px;
-    margin-top: 5%;
-    margin-bottom: 4%;
-    background: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.about-glass {
-    width: 100%;
-    max-width: 1100px;
-    display: flex;
-    gap: 10px;
-    padding: 20px 10px;
-    border-radius: 24px;
-    border: 1px solid rgba(255, 200, 0, 0.18);
-}
-
-.about-image {
-    flex: 0.9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.about-image img {
-    width: 75%;
-    max-width: 300px;
-    border-radius: 20px;
-    object-fit: cover;
-}
-
-.about-content {
-    flex: 2.5;
+.about-statement-section {
+    padding: 120px 80px;
     color: #fff;
-    font-family: 'Anton', 'Bebas Neue', sans-serif;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.about-name {
-    font-size: 2.5rem;
-    letter-spacing: 4px;
-    color: #e10600;
+.about-quote {
+    font-size: clamp(1.8rem, 3vw, 3rem);
+    line-height: 1.35;
+    color: #ffffffcc;
+    max-width: 1200px;
+    margin-bottom: 30px;
+}
+
+#about-line {
+    font-size: 1.2rem;
+    letter-spacing: 1.5px;
+    color: #ffffff88;
+    white-space: nowrap;
     margin-bottom: 10px;
 }
 
-.about-description {
-    font-size: 1rem;
+.about-divider {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.15);
+    margin-bottom: 20px;
+}
+
+.about-content-grid {
+    display: grid;
+    grid-template-columns: 0.65fr 1.2fr;
+    gap: 10px;
+    align-items: start;
+}
+
+.about-name {
     font-family: 'Bebas Neue', sans-serif;
-    letter-spacing: 1.2px;
-    line-height: 1.8;
-    color: #ffffffcc;
-    margin-bottom: 24px;
+    font-size: 2.6rem;
+    letter-spacing: 2px;
+    color: #e10600;
 }
 
-.about-role {
+/* DESCRIPTION */
+.about-description p {
     font-size: 1rem;
-    letter-spacing: 1.5px;
-    color: #ffffffaa;
+    line-height: 1.8;
+    letter-spacing: 0.4px;
+    color: #ffffffcc;
+    margin-bottom: 18px;
 }
 
-.about-role span {
-    color: #f5c400;
-}
-
-@media (max-width: 768px) {
-    #about-section {
-        height: auto;
-        padding: 60px 20px;
+@media (max-width: 900px) {
+    .about-statement-section {
+        padding: 80px 24px;
     }
 
-    .about-glass {
-        flex-direction: column;
-        padding: 28px 20px;
-        gap: 24px;
-        border-radius: 20px;
-        text-align: center;
-    }
-
-    .about-image {
-        justify-content: center;
-    }
-
-    .about-image img {
-        width: 65%;
-        max-width: 180px;
-        border-radius: 16px;
-    }
-
-    .about-content {
-        text-align: center;
+    .about-content-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 
     .about-name {
-        font-size: 2rem;
-        letter-spacing: 3px;
-        margin-bottom: 12px;
+        font-size: 2.2rem;
     }
 
-    .about-description {
-        font-size: 0.95rem;
-        line-height: 1.6;
-        margin-bottom: 20px;
+    .about-quote {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-quote {
+        font-size: 1.6rem;
+        line-height: 1.4;
     }
 
-    .about-role {
+    .about-description p {
         font-size: 0.95rem;
-        letter-spacing: 1.2px;
     }
 }
