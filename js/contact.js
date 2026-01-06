@@ -1,30 +1,19 @@
 export function contact() {
-    const form = document.querySelector('.contact-form');
-    const btn = document.querySelector('.send-btn span');
-
-    form.addEventListener('submit', async (e) => {
+    document.querySelector('.contact-form').addEventListener('submit', (e) => {
         e.preventDefault();
-        const data = new FormData(e.target);
-        try {
-            const response = await fetch(e.target.action, {
-                method: 'POST',
-                body: data,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            });
+        const btn = document.querySelector('.send-btn span');
 
-            if (response.ok) {
-                btn.innerText = "SUCCESS // RECEIVED";
-                form.reset();
-            } else {
-                btn.innerText = "ERROR // INTERCEPTED";
-            }
-        } catch (error) {
-            btn.innerText = "SYSTEM_FAILURE";
-        }
+        // Simulate sending
+        btn.innerText = "TRANSMITTING...";
+
         setTimeout(() => {
-            btn.innerText = "SEND_MESSAGE";
-        }, 3000);
+            btn.innerText = "SUCCESS // RECEIVED";
+            document.querySelector('.contact-form').reset();
+
+            // Return to normal after 3 seconds
+            setTimeout(() => {
+                btn.innerText = "SEND_MESSAGE";
+            }, 3000);
+        }, 1500);
     });
 }
