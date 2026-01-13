@@ -21,6 +21,8 @@
     padding: 11px 20px;
     border-radius: 999px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
 }
 
 .navbar ul {
@@ -64,11 +66,6 @@
     color: white;
     text-decoration: none;
     border: 1px solid rgba(255, 255, 255, 0.16);
-
-    background: rgba(20, 15, 10, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(12px);
-
     opacity: 0.85;
     transition: all 0.3s ease;
 }
@@ -135,7 +132,6 @@
 @media (max-width: 768px) {
     .hero {
         height: fit-content;
-        /* min-height: 50svh; */
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -148,9 +144,6 @@
         left: 2%;
         transform: none;
         width: 96%;
-        /* padding: 12px 10px; */
-        background: rgba(0, 0, 0, 0.6);
-        backdrop-filter: blur(8px);
     }
 
     .navbar ul {
@@ -161,11 +154,9 @@
 
     .navbar ul li a {
         font-size: 13px;
-        /* Larger for readability */
         padding: 2px 4px;
     }
 
-    /* 3. Hero Text Layout */
     .hero-content {
         position: relative;
         top: 0;
@@ -190,7 +181,6 @@
         display: inline-block;
         order: 2;
         margin: 0 0 20px 3%;
-        /* Aligned with title */
         top: auto;
         left: 0;
         padding: 4px 14px;
