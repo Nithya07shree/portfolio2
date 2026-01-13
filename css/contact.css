@@ -1,70 +1,134 @@
-#contact-section {
-    padding: 100px 20px;
-    display: flex;
-    justify-content: center;
-}
-
-.terminal-text {
-    font-family: 'Bebas Neue', sans-serif;
-    color: #da0000;
-    font-size: 2.5rem;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-}
-
-.input-group {
-    position: relative;
-    margin-bottom: 40px;
-}
-
-.input-group input,
-.input-group textarea {
-    width: 100%;
-    padding: 10px 0;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #333;
+.contact-section {
+    padding: 120px 80px;
+    background: #000;
     color: #fff;
-    font-family: 'Space Mono', monospace;
-    font-size: 1rem;
-    outline: none;
-    transition: 0.3s;
 }
 
-.input-group label {
-    position: absolute;
-    left: 0;
-    top: 10px;
-    color: #555;
-    pointer-events: none;
-    transition: 0.3s;
-    font-family: 'Bebas Neue', sans-serif;
-    letter-spacing: 1px;
+.contact-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 80px;
+    align-items: center;
 }
 
-/* Animation for Label Moving Up */
-.input-group input:focus~label,
-.input-group input:not(:placeholder-shown)~label,
-.input-group textarea:focus~label,
-.input-group textarea:not(:placeholder-shown)~label {
-    top: -20px;
-    font-size: 0.8rem;
-}
-
-/* Submit Button Style */
-.send-btn {
-    background: transparent;
-    border: 1px solid #E21F26;
-    color: #ffffff;
-    padding: 15px 40px;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.2rem;
+/* LEFT */
+.contact-mains h2 {
+    font-family: sans-serif;
+    font-size: 2.4rem;
     letter-spacing: 2px;
-    position: relative;
-    overflow: hidden;
-    transition: 0.3s;
+    margin-bottom: 16px;
+    color: red;
 }
 
-.send-btn:hover {
-    box-shadow: 0 0 20px rgba(226, 31, 38, 0.4);
+.contact-mains p {
+    color: #ffffffcc;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    max-width: 480px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    /* gap: 18px; */
+    border: 1px solid white;
+    border-radius: 22px;
+    padding: 20px 20px;
+}
+
+.social-links a {
+    padding: 10px 18px;
+    border-radius: 999px;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1.5px;
+    transition: all 0.25s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.08);
+    color: #f5c400;
+}
+
+#contact-image {
+    width: 30px;
+}
+
+/* RIGHT */
+.contact-form-container {
+    padding: 36px 32px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(14px);
+}
+
+.contact-form-container h3 {
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+    font-family: 'Anton', sans-serif;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    color: #fff;
+    font-size: 0.95rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #ffffff88;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #f5c400;
+}
+
+/* BUTTON */
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+
+    background: #f5c400;
+    color: #000;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 18px rgba(245, 196, 0, 0.6);
+}
+
+@media (max-width: 900px) {
+    .contact-section {
+        padding: 80px 20px;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .contact-form-container {
+        padding: 28px 22px;
+    }
 }

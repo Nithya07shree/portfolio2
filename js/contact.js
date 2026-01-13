@@ -1,19 +1,21 @@
 export function contact() {
-    document.querySelector('.contact-form').addEventListener('submit', (e) => {
-        e.preventDefault();
-        const btn = document.querySelector('.send-btn span');
+    const btn = document.getElementById('direct-mail-btn');
+    const btnText = btn.querySelector('.btn-text');
 
-        // Simulate sending
-        btn.innerText = "TRANSMITTING...";
+    btn.addEventListener('click', () => {
+        btnText.innerText = "OPENING_SECURE_CHANNEL...";
+
+        // Settings based on your request
+        const destination = "bcd@gmail.com";
+        const subject = "PORTFOLIO_CONTACT_LOG";
 
         setTimeout(() => {
-            btn.innerText = "SUCCESS // RECEIVED";
-            document.querySelector('.contact-form').reset();
+            window.location.href = `mailto:${destination}?subject=${encodeURIComponent(subject)}`;
+            btnText.innerText = "COMMUNICATION_ESTABLISHED";
 
-            // Return to normal after 3 seconds
             setTimeout(() => {
-                btn.innerText = "SEND_MESSAGE";
-            }, 3000);
-        }, 1500);
+                btnText.innerText = "INITIALIZE_COMMUNICATION";
+            }, 4000);
+        }, 1200);
     });
 }

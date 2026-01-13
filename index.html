@@ -48,7 +48,7 @@
                     <li><a href="#experience-section">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact-section">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <a href="mailto:socials.pavanj@gmail.com" class="top-email"> socials.pavanj@gmail.com </a>
@@ -418,38 +418,52 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact-section">
-        <div class="contact-container">
-            <div class="contact-header">
-                <h2 class="terminal-text">Have a project in mind or just want to say hi?</h2>
+    <section id="contact" class="contact-section">
+
+        <div class="contact-mains">
+            <h2>>GET_IN_TOUCH</h2>
+            <p>
+                Interested in working together or building something impactful?
+                Feel free to reach out — I’m always open to meaningful conversations.
+            </p>
+        </div>
+        <div class="contact-wrapper">
+
+            <!-- LEFT CONTENT -->
+            <div class="contact-info">
+
+                <div class="social-links">
+                    <a href="https://github.com/yourusername" target="_blank"><img src="assets/images/github.png"
+                            id="contact-image" alt="GitHub" />
+                        github.com/pavanj123</a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank"><img src="assets/images/linkedin.png"
+                            id="contact-image" alt="LinkedIn" />
+                        linkedin.com/pavanj123</a>
+                    <a href="https://twitter.com/yourusername" target="_blank"><img src="assets/images/x.png"
+                            id="contact-image" alt="Twitter" />
+                        x.com/pavanj123</a>
+                </div>
             </div>
 
-            <form class="contact-form">
-                <div class="input-group">
-                    <input type="text" id="name" required placeholder=" ">
-                    <label for="name">NAME</label>
-                    <div class="line"></div>
-                </div>
+            <!-- RIGHT FORM -->
+            <div class="contact-form-container">
+                <h3>Message</h3>
 
-                <div class="input-group">
-                    <input type="email" id="email" required placeholder=" ">
-                    <label for="email">EMAIL_ADDRESS</label>
-                    <div class="line"></div>
-                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your name" required />
+                    <input type="email" placeholder="Email address" required />
+                    <textarea rows="4" placeholder="Type message" required></textarea>
 
-                <div class="input-group">
-                    <textarea id="message" required placeholder=" "></textarea>
-                    <label for="message">MESSAGE_LOG</label>
-                    <div class="line"></div>
-                </div>
+                    <button type="submit">SEND</button>
+                </form>
+            </div>
 
-                <button type="submit" class="send-btn">
-                    <span>SEND_MESSAGE</span>
-                    <div class="btn-fill"></div>
-                </button>
-            </form>
         </div>
+
     </section>
+
+
+
 
     <div class="cursor-dot"></div>
     <canvas id="cursor-trail"></canvas>
