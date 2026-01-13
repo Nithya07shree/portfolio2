@@ -90,9 +90,10 @@
 
 .timeline-card h3 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 8px;
-    letter-spacing: 2px;
+    font-weight: 400;
+    letter-spacing: 3.5px;
 }
 
 .timeline-card p {
@@ -100,6 +101,7 @@
     font-size: 0.95rem;
     letter-spacing: 1.2px;
     line-height: 1.5;
+    font-weight: 200;
     color: #ffffffcc;
 }
 

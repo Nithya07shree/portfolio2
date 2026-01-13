@@ -52,9 +52,29 @@
     margin-bottom: 18px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     .about-statement-section {
-        padding: 80px 24px;
+        padding: 96px 56px;
+    }
+
+    .about-quote {
+        font-size: clamp(1.7rem, 3.2vw, 2.6rem);
+        max-width: 100%;
+    }
+
+    .about-content-grid {
+        grid-template-columns: 0.65fr 1.2fr;
+        gap: 32px;
+    }
+
+    .about-name {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-statement-section {
+        padding: 72px 32px;
     }
 
     .about-content-grid {
@@ -62,22 +82,51 @@
         gap: 40px;
     }
 
-    .about-name {
-        font-size: 2.2rem;
+    #about-line {
+        white-space: normal;
+        font-size: 1.05rem;
     }
 
     .about-quote {
         font-size: 1.8rem;
+        line-height: 1.45;
+    }
+
+    .about-name {
+        font-size: 2.2rem;
+    }
+
+    .about-description p {
+        font-size: 0.98rem;
     }
 }
 
 @media (max-width: 480px) {
+    .about-statement-section {
+        padding: 56px 20px;
+    }
+
     .about-quote {
-        font-size: 1.6rem;
-        line-height: 1.4;
+        font-size: 1.55rem;
+        line-height: 1.45;
+    }
+
+    #about-line {
+        font-size: 0.95rem;
+        letter-spacing: 1px;
+    }
+
+    .about-name {
+        font-size: 1.9rem;
+        letter-spacing: 1.5px;
     }
 
     .about-description p {
         font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .about-divider {
+        margin-bottom: 16px;
     }
 }
