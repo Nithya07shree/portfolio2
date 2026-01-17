@@ -1,101 +1,155 @@
-.skills-section {
-    padding: 100px 80px;
+/* #skills {
+    padding: 6rem 5rem;
     background: #000;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 28px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* SKILL CARD */
-.skill-card {
-    padding: 26px 24px;
-    border-radius: 20px;
-
-    background: rgba(0, 0, 0, 0.55);
-    backdrop-filter: blur(18px);
-
-    border: 1px solid rgba(245, 196, 0, 0.25);
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
-
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill-card h3 {
-    font-family: 'Anton', sans-serif;
-    font-size: 1.4rem;
-    letter-spacing: 2px;
-    color: #e13c00;
-    margin-bottom: 18px;
-}
-
-/* TAGS */
-.skill-tags {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    flex-direction: column;
+    gap: 4rem;
 }
 
-.skill-tags span {
-    padding: 6px 12px;
-    border-radius: 10px;
+.category-block {
+    padding: 0 3rem;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    align-items: center;
+    gap: 3rem;
+}
 
+.skill-title {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 0.9rem;
-    letter-spacing: 1.2px;
+    font-size: 2.28rem;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.skills-strip {
+    overflow: hidden;
+    position: relative;
+}
+
+.skills-track {
+    display: flex;
+    gap: 1.2rem;
+    width: max-content;
+    animation: scrollSkills 22s linear infinite;
+}
+
+.skills-strip:hover .skills-track {
+    animation-play-state: paused;
+}
+
+@keyframes scrollSkills {
+    from {
+        transform: translatX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.skill {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.18em;
+
+    padding: 0.85rem 1.6rem;
+    border-radius: 999px;
 
     color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.35);
+    white-space: nowrap;
 
-    background: rgba(0, 0, 0, 0.6);
-    transition: all 0.25s ease;
+    background: rgba(255, 196, 0, 0.06);
+    border: 1px solid rgba(255, 196, 0, 0.45);
+
+    box-shadow:
+        0 0 18px rgba(255, 196, 0, 0.15),
+        inset 0 0 0 rgba(255, 255, 255, 0);
+
+    transition: all 0.3s ease;
 }
 
-.skill-tags span:hover {
-    color: #000;
-    background: #f5c400a7;
-    box-shadow: 0 0 12px rgba(245, 196, 0, 0.7);
-}
-
-/* Highlight critical skills */
-.skill-card.highlight {
-    border-color: rgba(225, 6, 0, 0.4);
-    box-shadow: 0 0 60px rgba(225, 6, 0, 0.25);
-}
-
-.skill-card:hover {
-    transform: translateY(-8px);
+.skill:hover {
+    background: rgba(255, 196, 0, 0.14);
+    box-shadow:
+        0 0 25px rgba(255, 196, 0, 0.35);
+    transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
-    .skills-section {
-        padding: 40px 15px;
-        width: 100%;
+    #skills {
+        padding: 4rem 1.5rem;
+        gap: 3rem;
     }
 
-    .skills-grid {
-        display: grid;
+    .category-block {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 1.5rem;
     }
 
-    .skill-card {
-        padding: 20px;
-        width: 100%;
+    .skill-title {
+        font-size: 1.8rem;
     }
 
-    .skill-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
+    .skill {
+        font-size: 1.2rem;
+        padding: 0.7rem 1.3rem;
+    }
+} */
+#skills {
+    padding: 90px 80px;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+}
+
+.category-block {
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 18vw 1fr;
+}
+
+.skill-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 0.1em;
+    padding: 1rem 2rem;
+    padding-top: 3rem;
+}
+
+.skills-strip {
+    overflow: hidden;
+    padding: 2rem 0;
+}
+
+.skills-track {
+    display: flex;
+    gap: 1rem;
+    width: max-content;
+    animation: scrollSkills 30s linear infinite;
+}
+
+.skills-strip:hover .skills-track {
+    animation-play-state: paused;
+}
+
+@keyframes scrollSkills {
+    from {
+        transform: translateX(0);
     }
 
-    .skill-tags span {
-        font-size: 0.75rem;
-        padding: 4px 10px;
+    to {
+        transform: translateX(-50%);
     }
+}
+
+.skill {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 0.1em;
+    border: 1px solid rgba(255, 196, 0, 0.5);
+    padding: 1rem 2rem;
+    background-color: rgba(255, 196, 0, 0.05);
+    border-radius: 15px;
 }

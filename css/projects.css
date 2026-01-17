@@ -25,7 +25,7 @@
     background: rgba(0, 0, 0, 0.55);
     backdrop-filter: blur(18px);
 
-    border: 1px solid rgba(245, 196, 0, 0.25);
+    border: 1px solid rgba(245, 196, 0, 0.5);
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -33,9 +33,20 @@
 
 .project-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(255, 140, 0, 0.65);
+    border-color: rgba(255, 196, 0, 0.5);
     box-shadow:
         0 7px 25px rgba(255, 140, 0, 0.25),
+        0 6px 18px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.proj-highlight {
+    border-color: rgba(225, 6, 0, 0.4);
+}
+
+.proj-highlight:hover {
+    border-color: rgba(255, 6, 0, 0.5);
+    box-shadow: 0 9px 25px rgba(255, 6, 0, 0.25),
         0 6px 18px rgba(0, 0, 0, 0.4),
         inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }

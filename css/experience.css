@@ -97,11 +97,11 @@
 }
 
 .timeline-card p {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 0.95rem;
-    letter-spacing: 1.2px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
     line-height: 1.5;
-    font-weight: 200;
+    font-weight: 400;
     color: #ffffffcc;
 }
 

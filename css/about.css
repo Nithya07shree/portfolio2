@@ -31,7 +31,7 @@
 
 .about-content-grid {
     display: grid;
-    grid-template-columns: 0.65fr 1.2fr;
+    grid-template-columns: 0.65fr 1.6fr;
     gap: 10px;
     align-items: start;
 }
@@ -45,7 +45,7 @@
 
 /* DESCRIPTION */
 .about-description p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.8;
     letter-spacing: 0.4px;
     color: #ffffffcc;
@@ -63,12 +63,16 @@
     }
 
     .about-content-grid {
-        grid-template-columns: 0.65fr 1.2fr;
+        grid-template-columns: 0.65fr 1.4fr;
         gap: 32px;
     }
 
     .about-name {
         font-size: 2.4rem;
+    }
+
+    .about-description p {
+        font-size: 1.15rem;
     }
 }
 
